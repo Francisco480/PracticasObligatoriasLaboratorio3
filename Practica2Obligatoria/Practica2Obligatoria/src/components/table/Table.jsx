@@ -28,7 +28,5 @@ const Table = ({ netIncomes }) => {
   export default Table;
 
   Table.propTypes = { 
-    id: PropTypes.number,
-    brand: PropTypes.string,
-    income: PropTypes.number
+    netIncomes: PropTypes.array,
 }
