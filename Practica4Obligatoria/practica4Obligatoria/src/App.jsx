@@ -6,15 +6,17 @@ import TaskList from './components/taskList/TaskList';
 function App() {
 
   const [tasks, setTasks] = useState([]);
+  const [contadorId, setContadorId] = useState(0);
 
   //Aca la funcion para agregar tareas
   const addTask = (taskName) =>{
     const newTask = {
-      id: tasks.length,
+      id: contadorId+1,
       name: taskName,
       completed: false //aca marco que la tarea no esta completada
     };
     setTasks([...tasks, newTask]);
+    setContadorId(contadorId+1);
   }
 
   //Aca hago la funcion para marcar que la tarea esta completada

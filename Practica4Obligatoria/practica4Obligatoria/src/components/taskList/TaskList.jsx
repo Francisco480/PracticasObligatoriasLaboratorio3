@@ -13,7 +13,7 @@ function TaskList({ tasks, toggleCompleteTask, deleteTask }) {
             color: task.completed ? 'gray' : 'black',
           }}
         >
-          <span className="mr-2">{task.name}</span>
+          <span className="mr-2">{task.name} {task.id}</span>
           <div>
             <button
               onClick={() => toggleCompleteTask(task.id)}
